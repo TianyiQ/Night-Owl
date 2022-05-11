@@ -334,7 +334,7 @@ def test_darkface():
         write_to_txt(f, dets , H , W)
         end_inference_clock = perf_counter()
         print(f'inference taken {end_inference_clock-end_enhance_clock} sec')
-        vis_detections(img_id.split('.')[0], image, dets, H, W)
+        # vis_detections(img_id.split('.')[0], image, dets, H, W)
         print(f'visualization taken {perf_counter()-end_inference_clock} sec', end='\n\n')
         
         
