@@ -30,7 +30,7 @@ from enhance.enhance import lowlight_enhance
 plt.switch_backend('agg')
 
 # output_dir = 'C:/Programming/git-projects/low-light-face-detection/outputs/'.replace('\\','/')
-output_dir = '/code/outputs/'
+output_dir = '/model/'
 
 parser = argparse.ArgumentParser(description='DSFD: Dual Shot Face Detector')
 parser.add_argument('--trained_model', default='weights/WIDERFace_DSFD_RES152.pth',
