@@ -37,10 +37,12 @@ TODO 表示还没来得及写文档的部分。
 - `.pth` 文件过大，故不在 github 上存放。
     - 在 `./weights/PLACEHOLDER_FOR_PTH_FILES.txt` 中列出了所有 `.pth` 文件的名字。
     - `.pth` 文件在 https://boya.ai.pku.edu.cn/openai/#/modelDev/algorithmManager 中下载（名字以“【模型参数】”开头的那些算法）。
-- pku 算力平台使用的注意事项：从上传的算法建立 notebook 后，在 notebook 中对 `/code/` 所做的更改 **会** 被更新到算法里去。所以建议每次建立 `notebook` 之前都重新上传一下要用的算法。
-- 平台上用的镜像，是 “我的镜像” 中的 mirror:ini
-    - 装了 conda ，各种包（包括合适版本的 cudatoolkit ）都装在 conda 的 PyEnv 这个环境中（不是 base ！）
-    - 由于未知原因， conda 命令无法保持在 PATH 中，所以要进入 PyEnv 需要依次进行以下指令（而不是 `conda activate PyEnv` ）：
+- pku 算力平台使用的注意事项：
+    - 从上传的算法建立 notebook 后，在 notebook 中对 `/code/` 所做的更改 **会** 被更新到算法里去。所以建议每次建立 `notebook` 之前都重新上传一下要用的算法。
+    - 从 notebook 创建镜像时，镜像名和标签都要由小写字母组成，否则会出错。创建镜像时停止notebook中的操作。创建镜像可能需要等很久，比如 0.5~1h 。
+- 平台上的原始镜像是 raw:raw ，里面啥都没有。我打包了一个能用的镜像，是 “我的镜像” 中的 mirror:ini 。
+    - mirror:ini 里装了 conda ，各种包（包括合适版本的 cudatoolkit ）都装在 conda 的 PyEnv 这个环境中（不是 base ！）
+    - 由于未知原因， conda 命令无法保持在 PATH 中，所以要进入 PyEnv 需要依次进行以下指令（而不是直接 `conda activate PyEnv` ）：
         - `/root/anaconda3/bin/conda init`
         - `. ~/.bashrc`
         - `conda activate PyEnv`
