@@ -5,6 +5,12 @@ TODO 表示还没来得及写文档的部分。
 
 - 目前做法：先对测试数据做低光照提亮，然后用 DSFD 识别。DSFD 采用腾讯在 WIDERFACE 上预训练好的参数。
     - 分数：0.373434
+- 进一步的思路：（待讨论）
+    - LLIE 换成 Zero-DCE ？
+    - 在 DARKFACE 训练集上 finetune ？（训练样本先经过提亮？）
+        - 换用课上提到的这个（支持训练的）框架？ https://github.com/yxlijun/DSFD.pytorch
+    - 对 DARKFACE 测试集进行无监督学习作为辅助？（这么干符合规则吗？）
+    - ……（待讨论）
 
 ## 目录结构
 
@@ -38,7 +44,8 @@ TODO 表示还没来得及写文档的部分。
         - `/root/anaconda3/bin/conda init`
         - `. ~/.bashrc`
         - `conda activate PyEnv`
-- 在 DARKFACE 测试集上测试的代码（可以直接填入训练任务的运行命令一栏）：
+- 算力平台上，用 DARKFACE 测试集进行测试的代码（可以直接填入训练任务的运行命令一栏）：
+    - 如果是本地测试，前四行可以忽略，第五行不变。
 ```bash
 /root/anaconda3/bin/conda init
 . ~/.bashrc
