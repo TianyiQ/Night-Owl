@@ -7,7 +7,7 @@ TODO 表示还没来得及写文档的部分。
     - 分数：0.373434
 - 进一步的思路：（待讨论）
     - LLIE 换成 Zero-DCE ？
-    - 在 DARKFACE 训练集上 finetune ？（训练样本先经过提亮？）
+    - 在 DARKFACE 训练集上 finetune ？（训练样本先经过提亮？把提亮网络和识别网络连在一起训？）
         - 换用课上提到的这个（支持训练的）框架？ https://github.com/yxlijun/DSFD.pytorch
     - 对 DARKFACE 测试集进行无监督学习作为辅助？（这么干符合规则吗？）
     - ……（待讨论）
