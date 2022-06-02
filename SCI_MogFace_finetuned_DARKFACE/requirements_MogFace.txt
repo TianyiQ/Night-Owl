@@ -1,0 +1,6 @@
+pyyaml
+tensorboardX
+six
+Cython
+protobuf==3.20.0
+tqdm
