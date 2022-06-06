@@ -1,0 +1,2 @@
+interpret_LIME_results.zip 中的文件名形如 {picname}-{num}.png ，其中 picname 没有特别含义，num 表示 LIME 的 API 里 num_features 这一参数的取值。
+本来还有尝试用 SHAP 进行解释，但是 SHAP 未能成功运行（遇到 AssertionError），经过检查我怀疑是 shap 包有 bug 。见 interpret_LIME.ipynb 中最后一个被注释掉的 cell 。
